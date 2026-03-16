@@ -79,9 +79,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.game-card:hover .banner-card:nth-child(1) { transform: rotate(-8deg) translateY(-6px); }
-.game-card:hover .banner-card:nth-child(2) { transform: translateY(-10px); }
-.game-card:hover .banner-card:nth-child(3) { transform: rotate(8deg) translateY(-6px); }
+.game-card:hover .banner-gml-cards .banner-card:nth-child(1) { transform: rotate(-8deg) translateY(-6px); }
+.game-card:hover .banner-gml-cards .banner-card:nth-child(2) { transform: translateY(-10px); }
+.game-card:hover .banner-gml-cards .banner-card:nth-child(3) { transform: rotate(8deg) translateY(-6px); }
 
 .banner-card.truth {
   background: linear-gradient(145deg, #1a3a6b, #0d2a55);
@@ -154,9 +154,10 @@
   letter-spacing: 0.06em;
 }
 
-.tag-party  { background: rgba(251, 191, 36, 0.12);  color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.2); }
-.tag-social { background: rgba(34, 211, 165, 0.12);  color: #22d3a5; border: 1px solid rgba(34, 211, 165, 0.2); }
-.tag-free   { background: rgba(0, 212, 255, 0.10);   color: var(--accent-cyan); border: 1px solid var(--border); }
+.tag-party   { background: rgba(251, 191, 36, 0.12);  color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.2); }
+.tag-social  { background: rgba(34, 211, 165, 0.12);  color: #22d3a5; border: 1px solid rgba(34, 211, 165, 0.2); }
+.tag-free    { background: rgba(0, 212, 255, 0.10);   color: var(--accent-cyan); border: 1px solid var(--border); }
+.tag-mystery { background: rgba(139, 92, 246, 0.12);  color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.25); }
 
 .game-card-title {
   font-family: 'Space Grotesk', sans-serif;
@@ -239,3 +240,50 @@
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.12);
 }
+
+/* ── Read My Mind Banner ── */
+.banner-rmm {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #060d20 0%, #0a1e30 50%, #060f1e 100%);
+  overflow: hidden;
+}
+
+.banner-rmm::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 65% at 18% 50%, rgba(6, 182, 212, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 65% at 82% 50%, rgba(6, 182, 212, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 45% at 50% 50%, rgba(251, 191, 36, 0.10) 0%, transparent 55%);
+}
+
+.banner-rmm-cards {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  transform: perspective(400px) rotateX(8deg);
+}
+
+.banner-card.rmm-player {
+  background: linear-gradient(145deg, #093040, #051e2e);
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.35);
+}
+
+.banner-card.rmm-prompt {
+  background: linear-gradient(145deg, #271d06, #160f03);
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.3);
+  font-size: 1.25rem;
+}
+
+/* On hover: outer cards converge inward = two minds syncing */
+.game-card:hover .banner-rmm-cards .banner-card:nth-child(1) { transform: rotate(8deg)  translateY(-6px); }
+.game-card:hover .banner-rmm-cards .banner-card:nth-child(2) { transform: translateY(-10px); }
+.game-card:hover .banner-rmm-cards .banner-card:nth-child(3) { transform: rotate(-8deg) translateY(-6px); }
