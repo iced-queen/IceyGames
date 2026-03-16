@@ -1,0 +1,81 @@
+/* ── Reset & Box Model ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design Tokens ── */
+:root {
+  --bg-deep:       #050d1a;
+  --bg-mid:        #081526;
+  --bg-card:       #0b1e36;
+  --accent-cyan:   #00d4ff;
+  --accent-blue:   #0090e7;
+  --accent-purple: #7b5ea7;
+  --frost-white:   #e0f4ff;
+  --text-primary:  #eef6ff;
+  --text-muted:    #7a9bb5;
+  --border:        rgba(0, 212, 255, 0.15);
+  --glow-cyan:     0 0 40px rgba(0, 212, 255, 0.25);
+  --glow-card:     0 0 60px rgba(0, 144, 231, 0.12);
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ── Particle Canvas ── */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* ── Page Wrapper ── */
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Shared Section Layout ── */
+.section {
+  padding: 5rem 5vw;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 0.4rem;
+}
+
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--frost-white);
+}

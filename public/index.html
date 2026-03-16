@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icey Games</title>
+
+  <!-- Primary meta -->
+  <meta name="description" content="Icey Games — indie browser games you can play anywhere, free, no downloads." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Icey Games" />
+  <meta property="og:description" content="Indie browser games you can play anywhere, free, no downloads." />
+  <meta property="og:image"       content="img/logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Icey Games" />
+  <meta name="twitter:description" content="Indie browser games you can play anywhere, free, no downloads." />
+  <meta name="twitter:image"       content="img/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/css/base.css" />
+  <link rel="stylesheet" href="../src/css/nav.css" />
+  <link rel="stylesheet" href="../src/css/hero.css" />
+  <link rel="stylesheet" href="../src/css/games.css" />
+  <link rel="stylesheet" href="../src/css/features.css" />
+  <link rel="stylesheet" href="../src/css/animations.css" />
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<div class="wrapper">
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="img/logo.png" alt="Icey Games logo" class="nav-logo-icon" />
+      <span class="nav-logo-text">Icey Games</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#games">Games</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Indie Game Studio</div>
+    <h1 class="hero-title">
+      <span class="word-icey">Icey</span><br />
+      <span class="word-games">Games</span>
+    </h1>
+    <p class="hero-subtitle">
+      Small studio, big fun. Browser-based games you can play anywhere — no downloads, no installs, just play.
+    </p>
+    <div class="hero-actions">
+      <a href="#games" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Browse Games
+      </a>
+      <a href="#about" class="btn btn-ghost">About the Studio</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value">1</div>
+      <div class="stat-label">Game Live</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">Free</div>
+      <div class="stat-label">Always</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">0 ms</div>
+      <div class="stat-label">Install Time</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">∞</div>
+      <div class="stat-label">Good Times</div>
+    </div>
+  </div>
+
+  <!-- GAMES -->
+  <section class="section" id="games">
+    <div class="section-header">
+      <div>
+        <div class="section-tag">Catalog</div>
+        <h2 class="section-title">Available Games</h2>
+      </div>
+    </div>
+
+    <div class="games-grid">
+
+      <!-- Guess My Lie -->
+      <a href="https://guessmyliegame.onrender.com" target="_blank" rel="noopener noreferrer" class="game-card">
+        <div class="game-card-banner">
+          <div class="banner-gml">
+            <div class="banner-gml-cards">
+              <div class="banner-card truth">✓</div>
+              <div class="banner-card question">?</div>
+              <div class="banner-card lie">✗</div>
+            </div>
+          </div>
+          <span class="game-card-badge">
+            <span class="game-card-live-dot"></span>Live
+          </span>
+        </div>
+        <div class="game-card-body">
+          <div class="game-card-tags">
+            <span class="tag tag-party">Party</span>
+            <span class="tag tag-social">Social</span>
+            <span class="tag tag-free">Free</span>
+          </div>
+          <div class="game-card-title">Guess My Lie</div>
+          <p class="game-card-desc">
+            Can your friends sniff out your lies? Share two truths and a lie — see who gets fooled and who sees right through you.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-card-play">
+              Play Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Placeholder -->
+      <div class="game-card-placeholder">
+        <div class="placeholder-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="16"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+        </div>
+        <div class="placeholder-title">More Games Coming Soon</div>
+        <div class="placeholder-sub">New experiences are in the works</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES / ABOUT -->
+  <section id="about">
+    <div class="features">
+      <div class="feature-card">
+        <span class="feature-icon">🌐</span>
+        <div class="feature-title">Play in Your Browser</div>
+        <p class="feature-desc">No downloads, no accounts required. Just click a link and start playing instantly on any device.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎮</span>
+        <div class="feature-title">Made with Passion</div>
+        <p class="feature-desc">Icey Games is an indie solo studio. Every game is crafted with care, creativity, and a focus on fun.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🆓</span>
+        <div class="feature-title">Always Free</div>
+        <p class="feature-desc">Every game here is completely free to play. No paywalls, no microtransactions, no catch.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🧊</span>
+        <div class="feature-title">Cool Stuff Ahead</div>
+        <p class="feature-desc">More games are in development. This hub will grow — stay tuned for new drops and announcements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="Icey Games logo" style="width:22px;height:22px;object-fit:contain;" />
+      <span class="footer-brand-text">Icey Games</span>
+    </div>
+    <div class="footer-right">&copy; 2026 Icey Games &mdash; All rights reserved</div>
+  </footer>
+</div>
+
+<script src="../src/js/particles.js"></script>
+
+</body>
+</html>
