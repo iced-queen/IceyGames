@@ -101,6 +101,26 @@
   border-color: rgba(240, 171, 252, 0.3);
 }
 
+/* ── Player Count Badge ── */
+.game-card-players {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 /* ── Card Badge ── */
 .game-card-badge {
   position: absolute;
@@ -158,6 +178,7 @@
 .tag-social  { background: rgba(34, 211, 165, 0.12);  color: #22d3a5; border: 1px solid rgba(34, 211, 165, 0.2); }
 .tag-free    { background: rgba(0, 212, 255, 0.10);   color: var(--accent-cyan); border: 1px solid var(--border); }
 .tag-mystery { background: rgba(139, 92, 246, 0.12);  color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.25); }
+.tag-drawing { background: rgba(251, 146, 60, 0.12);  color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.25); }
 
 .game-card-title {
   font-family: 'Space Grotesk', sans-serif;
@@ -287,3 +308,55 @@
 .game-card:hover .banner-rmm-cards .banner-card:nth-child(1) { transform: rotate(8deg)  translateY(-6px); }
 .game-card:hover .banner-rmm-cards .banner-card:nth-child(2) { transform: translateY(-10px); }
 .game-card:hover .banner-rmm-cards .banner-card:nth-child(3) { transform: rotate(-8deg) translateY(-6px); }
+
+/* ── Double Sketch Banner ── */
+.banner-ds {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1008 0%, #2a1a0a 50%, #18100a 100%);
+  overflow: hidden;
+}
+
+.banner-ds::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 20% 50%, rgba(251, 146, 60, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 70% at 80% 50%, rgba(167, 139, 250, 0.25) 0%, transparent 60%);
+}
+
+.banner-ds-cards {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  transform: perspective(400px) rotateX(8deg);
+}
+
+.banner-card.ds-real {
+  background: linear-gradient(145deg, #3a1f08, #2a1405);
+  color: #fb923c;
+  border-color: rgba(251, 146, 60, 0.35);
+}
+
+.banner-card.ds-guesser {
+  background: linear-gradient(145deg, #1c1508, #120e05);
+  color: #fde68a;
+  border-color: rgba(253, 230, 138, 0.25);
+  font-size: 1.25rem;
+}
+
+.banner-card.ds-decoy {
+  background: linear-gradient(145deg, #1f1040, #150b30);
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+/* On hover: real card rises, decoy wobbles */
+.game-card:hover .banner-ds-cards .banner-card:nth-child(1) { transform: rotate(-6deg) translateY(-8px); }
+.game-card:hover .banner-ds-cards .banner-card:nth-child(2) { transform: translateY(-10px); }
+.game-card:hover .banner-ds-cards .banner-card:nth-child(3) { transform: rotate(10deg) translateY(-4px); }
